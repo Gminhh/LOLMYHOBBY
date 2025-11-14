@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giới thiệu tướng — Liên Minh Huyền Thoại</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://cellphones.com.vn/sforum/wp-content/uploads/2022/12/4K-LOL-Wallpaper-Desktop.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img {
+      width: 100px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    .champion {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .champion:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .champion img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .champion-info h2 {
+      margin: 0;
+      font-size: 22px;
+      color: #ffd700;
+    }
+    .champion-info p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .abilities {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .abilities img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+
+    .ability-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="https://cdn.tgdd.vn/2020/05/GameApp/customLogo-200x200.png" alt="LoL Logo">
+      <h1>Giới thiệu Tướng Liên Minh Huyền Thoại</h1>
+      <p>Nhấn vào ảnh tướng để xem chiêu thức</p>
+    </header>
+
+    <!-- Ahri -->
+    <div class="champion" onclick="toggleAbilities('ahri-abilities')">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg" alt="Ahri">
+      <div class="champion-info">
+        <h2>Ahri</h2>
+        <p><strong>Vai trò:</strong> Pháp sư / Sát thủ</p>
+        <p><strong>Ngày ra mắt:</strong> 14/12/2011</p>
+      </div>
+    </div>
+
+    <div id="ahri-abilities" class="abilities">
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/passive/Ahri_SoulEater2.png"><span><strong>Hút Hồn (P):</strong> Hồi máu sau khi trúng kỹ năng nhiều lần.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/AhriQ.png"><span><strong>Quả Cầu Ma Thuật (Q):</strong> Ném quả cầu gây sát thương khi đi và về.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/AhriW.png"><span><strong>Lửa Hồ Ly (W):</strong> Tạo 3 lửa tự động bắn mục tiêu gần nhất.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/AhriE.png"><span><strong>Hôn Gió (E):</strong> Làm mê hoặc mục tiêu.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/AhriR.png"><span><strong>Phi Hồ (R):</strong> Lướt 3 lần gây sát thương.</span></div>
+    </div>
+
+    <!-- Yasuo -->
+    <div class="champion" onclick="toggleAbilities('yasuo-abilities')">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt="Yasuo">
+      <div class="champion-info">
+        <h2>Yasuo</h2>
+        <p><strong>Vai trò:</strong> Đấu sĩ / Sát thủ</p>
+        <p><strong>Ngày ra mắt:</strong> 13/12/2013</p>
+      </div>
+    </div>
+
+    <div id="yasuo-abilities" class="abilities">
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/passive/Yasuo_Passive.png"><span><strong>Đạo Của Lãng Khách (P):</strong> Tăng chí mạng và tạo lá chắn.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/YasuoQ1Wrapper.png"><span><strong>Bão Kiếm (Q):</strong> Đâm kiếm, tích 3 lần tạo lốc.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/YasuoW.png"><span><strong>Tường Gió (W):</strong> Chặn đòn tầm xa.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/YasuoE.png"><span><strong>Quét Kiếm (E):</strong> Lướt qua địch gây sát thương.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/YasuoR.png"><span><strong>Trăn Trối (R):</strong> Chém kẻ địch đang bị hất tung.</span></div>
+    </div>
+
+    <!-- Lux -->
+    <div class="champion" onclick="toggleAbilities('lux-abilities')">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg" alt="Lux">
+      <div class="champion-info">
+        <h2>Lux</h2>
+        <p><strong>Vai trò:</strong> Pháp sư / Hỗ trợ</p>
+        <p><strong>Ngày ra mắt:</strong> 19/10/2010</p>
+      </div>
+    </div>
+
+    <div id="lux-abilities" class="abilities">
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/passive/LuxIlluminatingFraulein.png"><span><strong>Chớp Lửa Soi Rọi (P):</strong> Đánh dấu mục tiêu để gây thêm sát thương.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/LuxLightBinding.png"><span><strong>Khóa Ánh Sáng (Q):</strong> Trói 2 mục tiêu.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/LuxPrismaticWave.png"><span><strong>Lăng Kính Phòng Hộ (W):</strong> Tạo lá chắn cho đồng minh.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/LuxLightStrikeKugel.png"><span><strong>Quả Cầu Ánh Sáng (E):</strong> Làm chậm và gây nổ.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/LuxR.png"><span><strong>Cầu Vồng Tối Thượng (R):</strong> Bắn tia năng lượng cực mạnh.</span></div>
+    </div>
+
+    <!-- Master Yi -->
+    <div class="champion" onclick="toggleAbilities('masteryi-abilities')">
+      <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MasterYi_0.jpg" alt="Master Yi">
+      <div class="champion-info">
+        <h2>Master Yi</h2>
+        <p><strong>Vai trò:</strong> Đấu sĩ / Sát thủ</p>
+        <p><strong>Ngày ra mắt:</strong> 21/02/2009</p>
+      </div>
+    </div>
+
+    <div id="masteryi-abilities" class="abilities">
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/passive/MasterYi_Passive1.png"><span><strong>Chém Đôi (P):</strong> Đòn đánh thứ 4 gây 2 lần.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/AlphaStrike.png"><span><strong>Tuyệt Kỹ Alpha (Q):</strong> Lướt và gây sát thương nhiều mục tiêu.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/Meditate.png"><span><strong>Thiền (W):</strong> Giảm sát thương và hồi máu.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/WujuStyle.png"><span><strong>Võ Thuật Wuju (E):</strong> Tăng sát thương chuẩn.</span></div>
+      <div class="ability-item"><img src="https://ddragon.leagueoflegends.com/cdn/15.22.1/img/spell/Highlander.png"><span><strong>Chiến Binh Sơn Cước (R):</strong> Tăng tốc đánh và miễn làm chậm.</span></div>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleAbilities(id) {
+      const abilities = document.getElementById(id);
+      const isVisible = abilities.style.display === 'block';
+      document.querySelectorAll('.abilities').forEach(el => el.style.display = 'none');
+      abilities.style.display = isVisible ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
